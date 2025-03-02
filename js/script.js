@@ -125,3 +125,15 @@ const anotherPage = document
   .addEventListener('click', function () {
     window.location.href = 'index1.html';
   });
+
+// to show current date
+
+function showDate() {
+  const today = new Date();
+  const formattedDate = today.toLocaleDateString();
+
+  document.getElementById(
+    'dateDiv'
+  ).innerHTML = `<strong>Date:</strong> <br> ${formattedDate}`;
+}
+window.onload = showDate;
